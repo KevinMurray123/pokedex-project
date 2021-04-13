@@ -1,28 +1,26 @@
 
 
 // All pages
-const charmander = require( 'charmader.json' );
-const charmeleon = require( 'charmelion.json' );
-const charizard = require( 'charizard.json' );
+// const charmander = require( 'charmader.json' );
+// const charmeleon = require( 'charmelion.json' );
+// const charizard = require( 'charizard.json' );
 
 function init(obj){
-    makeHeader(obj);
-    makeContent(obj);
+    // makeHeader(obj);
+    // makeContent(obj);
 }
 
 function choosePokemon(buttonPressed){
     switch(buttonPressed){
-        case(1):{
+        case(`charmander`):{
             init(charmander);
         }
-        case(2):{
+        case(`charmeleon`):{
             init(charmeleon);
         }
-        case(3):{
+        case(`charizard`):{
             init(charizard);
         }
     }
 }
 
-function makeHeader(){
-}
