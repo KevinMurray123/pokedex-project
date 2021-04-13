@@ -229,14 +229,12 @@ let header = document.getElementById("header");
 let section = document.getElementById("section");
 
 function init(obj) {
-    let superObj = JSON.parse(obj);
-    createHeader(superObj);
-    Abilities(superObj);
-    Stats(superObj);
-    Types(superObj);
+    let pokemonObj = JSON.parse(obj);
+    createHeader(pokemonObj);
+    Abilities(pokemonObj);
+    Stats(pokemonObj);
+    Types(pokemonObj);
 }
-
-
 
 function choosePokemon(buttonPressed){
     switch(buttonPressed){
