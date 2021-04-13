@@ -1,7 +1,13 @@
 
 
+// All pages
+const charmander = require( 'charmader.json' );
+const charmeleon = require( 'charmelion.json' );
+const charizard = require( 'charizard.json' );
+
 function init(obj){
-    makeHeader(obj)
+    makeHeader(obj);
+    makeContent(obj);
 }
 
 function choosePokemon(buttonPressed){
@@ -16,4 +22,7 @@ function choosePokemon(buttonPressed){
             init(charizard);
         }
     }
+}
+
+function makeHeader(){
 }
