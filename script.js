@@ -1,6 +1,6 @@
 // All pages
 
-let superObj = JSON.parse(charizard);
+// let superObj = JSON.parse(charizard);
 
 // Charmander
 
@@ -229,25 +229,16 @@ let charizardObj = `{
 let header = document.getElementById("header");
 let section = document.getElementById("section");
 
-function init(obj) {
-    let pokemonObj = JSON.parse(obj);
-    createHeader(pokemonObj);
-    Abilities(pokemonObj);
+function init(charmeleonObj) {
+    let superObj = JSON.parse(charmeleonObj);
+    createHeader(superObj);
+    Abilities(superObj);
+    Stats(superObj);
+    Types(superObj);
 }
 
-function choosePokemon(buttonPressed){
-    switch(buttonPressed){
-        case(`charmander`):{
-            init(charmanderObj);
-        }
-        case(`charmeleon`):{
-            init(charmeleonObj);
-        }
-        case(`charizard`):{
-            init(charizardObj);
-        }
-    }
-}
+init(charmeleonObj);
+
 
 // Creates header (name)
 
@@ -261,39 +252,74 @@ function createHeader(obj) {
     header.appendChild(BASEEXP)
 
     const HEIGHT = document.createElement("h4")
-    HEIGHT.textContent = `Height: ${obj.height} in.`
+    HEIGHT.textContent = `Height: ${obj.height} ft`
     header.appendChild(HEIGHT)
 
     const ID = document.createElement("h4")
     ID.textContent = `Id: #00${obj.id}`
     header.appendChild(ID)
+
+    const WEIGHT = document.createElement("h4")
+    WEIGHT.textContent = `Weight: ${obj.weight}lbs`
+    header.appendChild(WEIGHT)
 }
 
 
 
 function Abilities(obj){
+
+  const ABILNAME = document.createElement("h4")
+  ABILNAME.textContent = `Abilities: `
+  header.appendChild(ABILNAME)
+
     const ABILITIES = obj["abilities"]
     for(ability in ABILITIES){
-        const P1 = document.createElement("p")
-        const P2 = document.createElement("p")
+        const P1 = document.createElement("li")
+
 
         P1.textContent = ABILITIES[ability]["name"]
 
         section.appendChild(P1)
-        section.appendChild(P2)
+
     }
 }
+
+
 
 function Stats(obj){
   const STATS = obj["stats"]
   for(stat in STATS){
-      const P1 = document.createElement("p")
-      const P2 = document.createElement("p")
+      const STATNAME = document.createElement("p")
+      const P3 = document.createElement("li")
 
-      P1.textContent = STATS[stat]["name"] 
 
-      section.appendChild(P1)
-      section.appendChild(P2)
+      STATNAME.textContent = `${STATS[stat]["stat"]["name"]}: `
+
+      P3.textContent = `Base Stat: ${STATS[stat]["base_stat"]} | Effort: ${STATS[stat]["effort"]}`
+
+
+      section.appendChild(STATNAME)
+      section.appendChild(P3)
+
+
+  }
+}
+
+function Types(obj){
+  const TYPES = obj["types"]
+  for(type in TYPES){
+      const SLOT = document.createElement("p")
+
+
+
+      SLOT.textContent = `Slot ${TYPES[type]["slot"]}: ${TYPES[type]["type"]["name"]}`
+
+
+
+      section.appendChild(SLOT)
+
+
+
   }
 }
 
