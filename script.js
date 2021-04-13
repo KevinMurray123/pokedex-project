@@ -1,5 +1,4 @@
 // All pages
-
 // let superObj = JSON.parse(charizard);
 
 // Charmander
@@ -18,49 +17,49 @@ let charmanderObj = `{
     "height": 6,
     "id": 4,
     "is_default": true,
-    "name": "charmander",
+    "name": "Charmander",
     "order": 5,
     "stats": [
       {
         "base_stat": 39,
         "effort": 0,
         "stat": {
-          "name": "hp"
+          "name": "Hp"
         }
       },
       {
         "base_stat": 52,
         "effort": 0,
         "stat": {
-          "name": "attack"
+          "name": "Attack"
         }
       },
       {
         "base_stat": 43,
         "effort": 0,
         "stat": {
-          "name": "defense"
+          "name": "Defense"
         }
       },
       {
         "base_stat": 60,
         "effort": 0,
         "stat": {
-          "name": "special-attack"
+          "name": "Special-Attack"
         }
       },
       {
         "base_stat": 50,
         "effort": 0,
         "stat": {
-          "name": "special-defense"
+          "name": "Special-Defense"
         }
       },
       {
         "base_stat": 65,
         "effort": 1,
         "stat": {
-          "name": "speed"
+          "name": "Speed"
         }
       }
     ],
@@ -68,7 +67,7 @@ let charmanderObj = `{
       {
         "slot": 1,
         "type": {
-          "name": "fire"
+          "name": "Fire"
         }
       }
     ],
@@ -88,7 +87,7 @@ let charmeleonObj = `{
     "height": 11,
     "id": 5,
     "is_default": true,
-    "name": "charmeleon",
+    "name": "Charmeleon",
     "order": 6,
     "stats": [
       {
@@ -155,10 +154,10 @@ let charizardObj = `{
       }
     ],
     "base_experience": 240,
-    "height": 17,
+    "height": 1.7,
     "id": 6,
     "is_default": true,
-    "name": "charizard",
+    "name": "Charizard",
     "order": 7,
 
     "stats": [
@@ -229,15 +228,33 @@ let charizardObj = `{
 let header = document.getElementById("header");
 let section = document.getElementById("section");
 
-function init(charmeleonObj) {
-    let superObj = JSON.parse(charmeleonObj);
+function init(obj) {
+    let superObj = JSON.parse(obj);
     createHeader(superObj);
     Abilities(superObj);
     Stats(superObj);
     Types(superObj);
 }
 
-init(charmeleonObj);
+
+
+function choosePokemon(buttonPressed){
+    switch(buttonPressed){
+        case(`charmander`):
+            init(charmander)
+        break;
+        case(`charmeleon`):
+        init(charmander)
+    break;
+    case(`charizard`):
+    init(charizrd)
+break;
+    }
+}
+
+
+
+
 
 
 // Creates header (name)
@@ -252,7 +269,7 @@ function createHeader(obj) {
     header.appendChild(BASEEXP)
 
     const HEIGHT = document.createElement("h4")
-    HEIGHT.textContent = `Height: ${obj.height} ft`
+    HEIGHT.textContent = `Height: ${obj.height}`
     header.appendChild(HEIGHT)
 
     const ID = document.createElement("h4")
@@ -262,18 +279,24 @@ function createHeader(obj) {
     const WEIGHT = document.createElement("h4")
     WEIGHT.textContent = `Weight: ${obj.weight}lbs`
     header.appendChild(WEIGHT)
+
+    const ORDER = document.createElement("h4")
+    ORDER.textContent = `Order: ${obj.order}`
+    header.appendChild(ORDER)
 }
 
 
 
-function Abilities(obj){
 
-  const ABILNAME = document.createElement("h4")
-  ABILNAME.textContent = `Abilities: `
-  header.appendChild(ABILNAME)
+
+function Abilities(obj) {
+
+    const ABILNAME = document.createElement("h4")
+    ABILNAME.textContent = `Abilities: `
+    header.appendChild(ABILNAME)
 
     const ABILITIES = obj["abilities"]
-    for(ability in ABILITIES){
+    for (ability in ABILITIES) {
         const P1 = document.createElement("li")
 
 
@@ -286,41 +309,41 @@ function Abilities(obj){
 
 
 
-function Stats(obj){
-  const STATS = obj["stats"]
-  for(stat in STATS){
-      const STATNAME = document.createElement("p")
-      const P3 = document.createElement("li")
+function Stats(obj) {
+    const STATS = obj["stats"]
+    for (stat in STATS) {
+        const STATNAME = document.createElement("p")
+        const P3 = document.createElement("li")
 
 
-      STATNAME.textContent = `${STATS[stat]["stat"]["name"]}: `
+        STATNAME.textContent = `${STATS[stat]["stat"]["name"]}: `
 
-      P3.textContent = `Base Stat: ${STATS[stat]["base_stat"]} | Effort: ${STATS[stat]["effort"]}`
-
-
-      section.appendChild(STATNAME)
-      section.appendChild(P3)
+        P3.textContent = `Base Stat: ${STATS[stat]["base_stat"]} | Effort: ${STATS[stat]["effort"]}`
 
 
-  }
+        section.appendChild(STATNAME)
+        section.appendChild(P3)
+
+
+    }
 }
 
-function Types(obj){
-  const TYPES = obj["types"]
-  for(type in TYPES){
-      const SLOT = document.createElement("p")
+function Types(obj) {
+    const TYPES = obj["types"]
+    for (type in TYPES) {
+        const SLOT = document.createElement("p")
 
 
 
-      SLOT.textContent = `Slot ${TYPES[type]["slot"]}: ${TYPES[type]["type"]["name"]}`
+        SLOT.textContent = `Slot ${TYPES[type]["slot"]}: ${TYPES[type]["type"]["name"]}`
 
 
 
-      section.appendChild(SLOT)
+        section.appendChild(SLOT)
 
 
 
-  }
+    }
 }
 
 
