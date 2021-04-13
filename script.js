@@ -229,15 +229,27 @@ let charizardObj = `{
 let header = document.getElementById("header");
 let section = document.getElementById("section");
 
-function init(charmeleonObj) {
-    let superObj = JSON.parse(charmeleonObj);
-    createHeader(superObj);
-    Abilities(superObj);
-    Stats(superObj);
-    Types(superObj);
+function init(obj) {
+    let pokemonObj = JSON.parse(obj);
+    createHeader(pokemonObj);
+    Abilities(pokemonObj);
+    Stats(pokemonObj);
+    Types(pokemonObj);
 }
 
-init(charmeleonObj);
+function choosePokemon(buttonPressed){
+    switch(buttonPressed){
+        case(`charmander`):
+            init(charmander)
+        break;
+        case(`charmeleon`):
+            init(charmeleon)
+        break;
+        case(`charizard`):
+            init(charizard)
+        break;
+    }
+}
 
 
 // Creates header (name)
