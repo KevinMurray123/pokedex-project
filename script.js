@@ -324,6 +324,7 @@ function Abilities(obj) {
   ABILARTICLE.setAttribute("id", "abilArticle")
   const ABILNAME = document.createElement("h4")
   ABILNAME.textContent = `Abilities: `
+  ABILNAME.setAttribute("id", "abilName")
 
   ABILARTICLE.appendChild(ABILNAME)
 

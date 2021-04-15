@@ -40,6 +40,7 @@ button {
   background-color: #ff7700;
   color: white;
   width: 20%;
+  height: 40%;
   font-size: 110%;
   overflow: hidden;
   -webkit-box-shadow: 2px 4px 4px #4e4e4e;
@@ -50,6 +51,21 @@ h1 {
   text-decoration: underline;
   font-size: 3rem;
   font-family: 'pokemon';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
 }
 
 article {
@@ -62,7 +78,7 @@ article {
   -webkit-box-shadow: 5px 10px 10px grey;
           box-shadow: 5px 10px 10px grey;
   border-radius: 50px;
-  width: 60%;
+  width: 50%;
   margin-bottom: 20px;
   margin-top: 10px;
 }
@@ -72,12 +88,12 @@ article {
   -webkit-box-shadow: 5px 10px 10px grey;
           box-shadow: 5px 10px 10px grey;
   border-radius: 50px;
-  width: 60%;
+  width: 50%;
   margin-bottom: 20px;
 }
 
 #largeArticle {
-  width: 70%;
+  width: 50%;
   border: #ff7700 solid 10px;
   -webkit-box-shadow: 5px 10px 10px grey;
           box-shadow: 5px 10px 10px grey;
@@ -87,7 +103,7 @@ article {
 #statArticle {
   border: black solid 2px;
   margin-bottom: 10px;
-  width: 30%;
+  width: 60%;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -102,10 +118,6 @@ article {
   margin-top: 25px;
 }
 
-li {
-  margin-bottom: 10px;
-}
-
 #typesArticle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +126,7 @@ li {
   -webkit-box-shadow: 5px 10px 10px grey;
           box-shadow: 5px 10px 10px grey;
   border-radius: 25px;
-  width: 70%;
+  width: 50%;
   margin-bottom: 20px;
   margin-top: 20px;
 }

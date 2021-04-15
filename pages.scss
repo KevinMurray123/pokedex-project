@@ -19,6 +19,7 @@ body{
     background-color: rgba(255, 255, 255, 0.904);
     border-radius: 25px;
     margin-top: 25px;
+
 }
 
 p{
@@ -46,6 +47,7 @@ button{
     background-color: #ff7700;
     color: white;
     width: 20%;
+    height: 40%;
     font-size: 110%;
     overflow: hidden;
     box-shadow: 2px 4px 4px rgb(78, 78, 78);
@@ -55,11 +57,20 @@ h1{
     text-decoration: underline;
     font-size: 3rem;
     font-family: 'pokemon';
+    align-items: center;
+    justify-content: center;
 }
 
-// h4{
-//     border: black 2px solid;
-// }
+h4{
+    font-size: 1.2rem;
+}
+
+
+
+li{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
 
 article{
 
@@ -72,7 +83,7 @@ article{
     border: #ff7700 solid 10px;
     box-shadow: 5px 10px 10px grey;
     border-radius: 50px;
-    width: 60%;
+    width: 50%;
     margin-bottom: 20px;
     margin-top: 10px;
 }
@@ -81,12 +92,12 @@ article{
     border: #ff7700 solid 10px;
     box-shadow: 5px 10px 10px grey;
     border-radius: 50px;
-    width: 60%;
+    width: 50%;
     margin-bottom: 20px;
 }
 
 #largeArticle{
-    width: 70%;
+    width: 50%;
     border: #ff7700 solid 10px;
     box-shadow: 5px 10px 10px grey;
     border-radius: 50px;
@@ -99,7 +110,7 @@ article{
     border: black solid 2px;
 
     margin-bottom: 10px;
-    width: 30%;
+    width: 60%;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -115,16 +126,14 @@ article{
     margin-top: 25px;
 }
 
-li{
-    margin-bottom: 10px;
-}
+
 
 #typesArticle{
     display: flex;
     border: #ff7700 solid 10px;
     box-shadow: 5px 10px 10px grey;
     border-radius: 25px;
-    width: 70%;
+    width: 50%;
     margin-bottom: 20px;
     margin-top: 20px;
 }
