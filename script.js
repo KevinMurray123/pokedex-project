@@ -372,6 +372,8 @@ function Stats(obj) {
 }
 
 function Types(obj) {
+  const TYPESARTICLE = document.createElement("article")
+  TYPESARTICLE.setAttribute("id", "typesArticle")
   const TYPES = obj["types"]
   for (type in TYPES) {
     const SLOT = document.createElement("p")
@@ -382,7 +384,9 @@ function Types(obj) {
 
 
 
-    section.appendChild(SLOT)
+    
+    TYPESARTICLE.appendChild(SLOT)
+    section.appendChild(TYPESARTICLE)
 
 
 
