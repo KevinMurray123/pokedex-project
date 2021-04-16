@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   text-align: center;
   font-family: 'Orelega One', cursive;
-  width: 80%;
+  width: 60%;
   height: 80%;
   margin-bottom: 25px;
   background-color: rgba(255, 255, 255, 0.904);
@@ -21,7 +21,7 @@ body {
 
 p {
   color: black;
-  width: 10%;
+  width: 20%;
   margin-top: 10px;
   margin-bottom: 20px;
   margin-left: auto;
@@ -39,12 +39,25 @@ button {
   border-radius: 50px;
   background-color: #ff7700;
   color: white;
-  width: 20%;
-  height: 40%;
-  font-size: 110%;
+  width: 30%;
+  height: 50%;
+  font-size: 130%;
   overflow: hidden;
   -webkit-box-shadow: 2px 4px 4px #4e4e4e;
           box-shadow: 2px 4px 4px #4e4e4e;
+  -webkit-transition: font-size 1s;
+  transition: font-size 1s;
+}
+
+button:hover {
+  font-size: 160%;
+}
+
+.btn-scroll {
+  -webkit-transition: 2s;
+  transition: 2s;
+  color: darkblue;
+  animation: up-down 1 ease-in-out infinite alternate-reverse both;
 }
 
 h1 {
@@ -78,7 +91,7 @@ article {
   -webkit-box-shadow: 5px 10px 10px grey;
           box-shadow: 5px 10px 10px grey;
   border-radius: 50px;
-  width: 50%;
+  width: 60%;
   margin-bottom: 20px;
   margin-top: 10px;
 }
@@ -88,12 +101,12 @@ article {
   -webkit-box-shadow: 5px 10px 10px grey;
           box-shadow: 5px 10px 10px grey;
   border-radius: 50px;
-  width: 50%;
+  width: 60%;
   margin-bottom: 20px;
 }
 
 #largeArticle {
-  width: 50%;
+  width: 60%;
   border: #ff7700 solid 10px;
   -webkit-box-shadow: 5px 10px 10px grey;
           box-shadow: 5px 10px 10px grey;
@@ -103,7 +116,7 @@ article {
 #statArticle {
   border: black solid 2px;
   margin-bottom: 10px;
-  width: 60%;
+  width: 70%;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -111,7 +124,7 @@ article {
 }
 
 #statName {
-  width: 40%;
+  width: 50%;
 }
 
 #top {
@@ -126,8 +139,16 @@ article {
   -webkit-box-shadow: 5px 10px 10px grey;
           box-shadow: 5px 10px 10px grey;
   border-radius: 25px;
-  width: 50%;
+  width: 60%;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+#pokeImage {
+  text-shadow: 2px 2px 5px grey;
+  margin: 20px;
+  position: relative;
+  display: inline-block;
+  margin: 50px;
 }
 /*# sourceMappingURL=pages.css.map */

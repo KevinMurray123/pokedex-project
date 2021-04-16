@@ -9,3 +9,14 @@ body{
 #landing{
     text-align: center;
 }
+
+#pokeImage{
+    transition: width 1s, height 1s;
+}
+
+#pokeImage:hover{
+    width: 280px;
+    height: 280px;
+}
+
+

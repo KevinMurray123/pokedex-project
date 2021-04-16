@@ -282,9 +282,13 @@ function createHeader(obj) {
   // ORDER.textContent = `Order: ${obj.order}`
   // header.appendChild(ORDER)
 
+
+
   const H1 = document.createElement("h1")
   const TOP = document.createElement("article")
   TOP.setAttribute("id", "top");
+  const IMGARTICLE = document.createElement("article")
+  IMGARTICLE.setAttribute("id", "imgArticle");
   const MAINARTICLE = document.createElement("article")
   MAINARTICLE.setAttribute("id", "mainArticle");
   const BASEEXP = document.createElement("h4")
@@ -297,10 +301,23 @@ function createHeader(obj) {
 
   H1.textContent = name;
   BASEEXP.textContent = `Base Expereince: ${basexp}`;
-  HEIGHT.textContent = `Height: ${height}`;
+  HEIGHT.textContent = `Height: ${height} m.`;
   ID.textContent = `Id: ${id}`;
   WEIGHT.textContent = `Weight: ${weight}`;
   ORDER.textContent = `Order: ${order}`;
+
+  
+  const IMG = document.createElement("img")
+  IMG.setAttribute("id", "pokeImage")
+  if(H1.textContent == "Charmander"){
+    IMG.setAttribute('src', 'images/charmanderShadow.png');
+  } else if(H1.textContent == "Charmeleon"){
+    IMG.setAttribute('src', 'images/charmeleonShadow.png');
+  } else if(H1.textContent == "Charizard"){
+    IMG.setAttribute('src', 'images/charizardShadow.png');
+  }
+  IMG.setAttribute("width", "326px")
+  IMG.setAttribute("height", "256px")
 
 
   TOP.appendChild(H1)
@@ -309,8 +326,12 @@ function createHeader(obj) {
   MAINARTICLE.appendChild(ID)
   MAINARTICLE.appendChild(WEIGHT)
   MAINARTICLE.appendChild(ORDER)
+  IMGARTICLE.appendChild(IMG)
   
+  
+
   header.appendChild(TOP)
+  header.appendChild(IMGARTICLE)
   header.appendChild(MAINARTICLE)
 }
 
