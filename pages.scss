@@ -15,7 +15,6 @@ body{
     width: 60%;
     height: 80%;
     margin-bottom: 25px;
-    // background-color: rgba(255, 255, 255, 0.959);
     background-color: rgba(255, 255, 255, 0.904);
     border-radius: 25px;
     margin-top: 25px;
@@ -24,17 +23,13 @@ body{
 
 p{
     color: black;
-    // background-color: rgba(26, 24, 24, 0.596);
     width: 20%;
     margin-top: 10px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    // border: black 3px solid;
     font-size: 1.2rem;
     border-radius: 25px;
-
-
 }
 
 li{
@@ -76,8 +71,6 @@ h4{
     font-size: 1.2rem;
 }
 
-
-
 li{
     margin-bottom: 10px;
     font-size: 1.3rem;
@@ -112,9 +105,6 @@ article{
     border: #ff7700 solid 10px;
     box-shadow: 5px 10px 10px grey;
     border-radius: 50px;
-    // display: flex;
-    // flex-direction: row;
-    // align-items: flex-start;
 }
 
 #statArticle{
@@ -129,15 +119,12 @@ article{
 }
 
 #statName{
-    // background-color: rgb(255, 0, 0);
     width: 50%;
 }
 
 #top{
     margin-top: 25px;
 }
-
-
 
 #typesArticle{
     display: flex;
@@ -152,15 +139,10 @@ article{
 #pokeImage{
     text-shadow: 2px 2px 5px grey;
     margin: 20px;
-    position: relative;
-    display: inline-block;
     margin: 50px;
-    // transition: width 1s, height 1s;
+    width: 50%;
+    height: 250px;
 }
 
-// #pokeImage:hover{
-//     width: 376px;
-//     height: 296px;
-// }
 
 

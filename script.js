@@ -3,7 +3,7 @@
 
 // Charmander
 
-// All pages
+// JSON Files
 let charmanderObj = `{
     "abilities": [
       {
@@ -222,7 +222,6 @@ let charizardObj = `{
 }
 `
 
-
 // Initialization Stuff
 
 let header = document.getElementById("header");
@@ -250,40 +249,9 @@ function choosePokemon(buttonPressed) {
   }
 }
 
-
-
-
-
-
-// Creates header (name)
+// Creates header which includes pokemon image
 
 function createHeader(obj) {
-  // const H1 = document.createElement("h1")
-  // H1.textContent = obj.name
-  // header.appendChild(H1)
-
-  // const BASEEXP = document.createElement("h4")
-  // BASEEXP.textContent = `Base Expereince: ${obj.base_experience}`
-  // header.appendChild(BASEEXP)
-
-  // const HEIGHT = document.createElement("h4")
-  // HEIGHT.textContent = `Height: ${obj.height}`
-  // header.appendChild(HEIGHT)
-
-  // const ID = document.createElement("h4")
-  // ID.textContent = `Id: #00${obj.id}`
-  // header.appendChild(ID)
-
-  // const WEIGHT = document.createElement("h4")
-  // WEIGHT.textContent = `Weight: ${obj.weight}lbs`
-  // header.appendChild(WEIGHT)
-
-  // const ORDER = document.createElement("h4")
-  // ORDER.textContent = `Order: ${obj.order}`
-  // header.appendChild(ORDER)
-
-
-
   const H1 = document.createElement("h1")
   const TOP = document.createElement("article")
   TOP.setAttribute("id", "top");
@@ -303,10 +271,9 @@ function createHeader(obj) {
   BASEEXP.textContent = `Base Expereince: ${basexp}`;
   HEIGHT.textContent = `Height: ${height} m.`;
   ID.textContent = `Id: ${id}`;
-  WEIGHT.textContent = `Weight: ${weight}`;
+  WEIGHT.textContent = `Weight: ${weight} lbs`;
   ORDER.textContent = `Order: ${order}`;
 
-  
   const IMG = document.createElement("img")
   IMG.setAttribute("id", "pokeImage")
   if(H1.textContent == "Charmander"){
@@ -316,9 +283,8 @@ function createHeader(obj) {
   } else if(H1.textContent == "Charizard"){
     IMG.setAttribute('src', 'images/charizardShadow.png');
   }
-  IMG.setAttribute("width", "326px")
-  IMG.setAttribute("height", "256px")
-
+  IMG.setAttribute("width", "250px")
+  IMG.setAttribute("height", "250px")
 
   TOP.appendChild(H1)
   MAINARTICLE.appendChild(BASEEXP)
@@ -328,16 +294,10 @@ function createHeader(obj) {
   MAINARTICLE.appendChild(ORDER)
   IMGARTICLE.appendChild(IMG)
   
-  
-
   header.appendChild(TOP)
   header.appendChild(IMGARTICLE)
   header.appendChild(MAINARTICLE)
 }
-
-
-
-
 
 function Abilities(obj) {
 
@@ -353,17 +313,13 @@ function Abilities(obj) {
   for (ability in ABILITIES) {
     const P1 = document.createElement("li")
 
-
     P1.textContent = ABILITIES[ability]["name"]
 
     ABILARTICLE.appendChild(P1)
 
-
     section.appendChild(ABILARTICLE)
   }
 }
-
-
 
 function Stats(obj) {
   const LARGEARTICLE = document.createElement("article")
@@ -376,12 +332,10 @@ function Stats(obj) {
     const STATNAME = document.createElement("p")
     const P3 = document.createElement("li")
 
-
     STATNAME.textContent = `${STATS[stat]["stat"]["name"]} `
     STATNAME.setAttribute("id", "statName")
 
     P3.textContent = `Base Stat: ${STATS[stat]["base_stat"]} | Effort: ${STATS[stat]["effort"]}`
-
 
     ARTICLE.appendChild(STATNAME)
     ARTICLE.appendChild(P3)
@@ -400,35 +354,9 @@ function Types(obj) {
   for (type in TYPES) {
     const SLOT = document.createElement("p")
 
-
-
     SLOT.textContent = `Slot ${TYPES[type]["slot"]}: ${TYPES[type]["type"]["name"]}`
 
-
-
-    
     TYPESARTICLE.appendChild(SLOT)
     section.appendChild(TYPESARTICLE)
-
-
-
   }
 }
-
-
-
-
-
-
-
-// Charmeleon
-
-
-
-
-// All pages
-// const charmander = require( 'charmader.json' );
-// const charmeleon = require( 'charmelion.json' );
-// const charizard = require( 'charizard.json' );
-
-
